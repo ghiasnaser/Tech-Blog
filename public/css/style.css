@@ -1,0 +1,75 @@
+header, .project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.blog-button {
+  background-color: #4CAF50; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove button border */
+  border-radius: 4px; /* Rounded button corners */
+  font-size: 20px; /* Button text size */
+  font-weight: bolder;
+  cursor: pointer; /* Show pointer cursor on hover */
+  margin-top: 20px;
+  /* 3D effect */
+  box-shadow: 0px 5px 0px 0px #388E3C; /* Shadow beneath the button */
+  transition: box-shadow 0.3s; /* Smooth transition on hover */
+}
+
+.blog-button:hover {
+  box-shadow: 0px 8px 0px 0px #388E3C; /* Increase shadow size on hover */
+  transform: translateY(-2px); /* Move button up slightly on hover */
+}
+
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+
+
+header{
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.nav-link{
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 2%;
+}
+body{
+  margin-top: 100px;
+}
+
+#comments_form {
+  margin-top: 2%;
+  display: flex;
+  width: 100%;
+}
+
+.comments_form textarea {
+  flex: 1;
+}
+
+.comments_form button {
+  margin-left: 10px;
+}
