@@ -27,18 +27,31 @@
   <div class="col-md-6 blog-list">
     <h3>Current blogs:</h3>
 
-    {{#each blogs as |blog|}}
+     {{#each blogs as |blog|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
       </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
+      <div class="row">
+        <button class="btn btn-sm btn-danger delete-blog-btn" data-id="{{blog.id}}">DELETE</button>
+        <button class="btn btn-sm btn-primary edit-blog-btn" data-update-id="{{blog.id}}">UPDATE</button>
       </div>
     </div>
     {{/each}}
+
   </div>
   {{/if}}
+  <div id="BlogPopupWindow" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Form content will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+
+
+
+
 </div>
 
 <script src="./js/profile.js"></script>

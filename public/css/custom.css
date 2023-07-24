@@ -234,3 +234,98 @@ color: #fff;
 padding: 10px;
 text-align: center;
 }
+
+.btn-danger{
+  margin-right: 20px;
+  cursor: pointer;
+  height: 30px;
+}
+
+.btn-primary{
+  cursor: pointer;
+  height: 30px;
+}
+
+
+/* This class should hide the popup window by default */
+.hidden {
+  display: none;
+}
+
+#editBlogForm {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Apply Bootstrap's spacing utility classes */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Center the form horizontally within the popup */
+#editBlogForm {
+  max-width: 75%; /* Adjust the maximum width as needed */
+  margin: 0 auto;
+}
+
+/* Style the labels */
+label {
+  font-weight: bold;
+}
+
+/* Style the input fields */
+.form-control {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Style the buttons */
+.btn-primary,
+.btn-secondary {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  margin-left: 1rem; /* Add some spacing between the buttons */
+}
+
+.form-submit{
+  margin-bottom: 2%;
+  height: 40px;
+  width: 120px;
+}
+
+.form-cancel{
+  margin-top: 2%;
+  height: 40px;
+  width: 120px;
+}
