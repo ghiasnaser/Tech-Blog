@@ -1,0 +1,39 @@
+<div class="text-center">
+  <h1 >{{title}}</h1>
+</div>
+<div>
+  <p>{{content}}</p>
+</div>
+<div class="text-center" id="blog-container" data-blog-id="{{ id }}" >
+  <p id="auther">Created by {{user.name}} on {{format_date date_created}}</p>
+  <div id="current-user" data-user-id={{ currentUser.id }}></div>
+  <div id="bolg-owner" data-user-id={{ user_id }}></div>
+</div>
+ <!-- Comments box -->
+<div class="comments-box">
+  <h3>Comments</h3>
+  {{#each comments as |comment|}}
+   <div id="comment-owner" data-user-id="{{ user_id }}">
+      <div class="comment" id="comment-{{comment.id}}" data-comment-id="{{ comment.id }}" >
+        <h6>{{comment.comment_content}}</h6>
+        <p style="font-size: xx-small;">Comment by {{comment.user.name}} on {{format_date comment.date_created}}</p>
+        <div class="buttons-container" data-user-id="{{ user_id }}">
+          <button class="delete-button" data-comment-id="{{comment.id}}" style="display: none;" >Delete</button>
+          <button class="update-button" data-comment-id="{{comment.id}}" style="display: none;" >Update</button>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+{{#if logged_in}}
+  <div id="comment-form">
+    <!-- Comment form -->
+        <form  id="comments_form" style="margin-bottom: 4%;">
+          <input type="hidden" name="blog_id" value="{{id}}">
+          <textarea name="comment_content" placeholder="Add a comment"></textarea>
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+{{/if}}
+  
+
