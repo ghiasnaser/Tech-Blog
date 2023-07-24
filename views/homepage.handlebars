@@ -1,0 +1,15 @@
+<!-- Loop over each object in the blogs array -->
+{{#each blogs as |blog| }}
+  <div class="">
+    <div class="">
+      <div style="background-color: azure;">
+        <h2>
+          <a href="/blog/{{blog.id}}">{{blog.title}}</a>
+        </h2>
+        <p>Created by {{blog.user.name}} on {{format_date blog.date_created}}</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+  <hr style="height: 4px; background-color: black;">
+{{/each}}
